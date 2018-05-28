@@ -13,10 +13,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <a href="<c:url value="/home"/>"> Home</a> <br>
-        <a href="<c:url value="/admin/show-profile"/>"> Admin</a> <br>
-        <a href="<c:url value="/user-profile?name=Huy&country=VietNam"/>"> User</a> <br>
-        <a href="<c:url value="/view-account/1/Huy/18"/>"> PathVariable</a> <br>
-        <a href="<c:url value="/model-view"/>"> Modelview</a> <br>
+
     </body>
 </html>

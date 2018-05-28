@@ -26,7 +26,7 @@
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
         </property>
         <!--  package chứa entity -->
-        <property name="packagesToScan" value="project.flightbooking.entity" />
+        <property name="packagesToScan" value="com.spring.entity" />
         <property name="jpaProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
@@ -38,7 +38,7 @@
     </bean>
     
     <!--  package chứa repository -->
-    <jpa:repositories base-package="project.flightbooking.repository" />
+    <jpa:repositories base-package="com.spring.repository" />
     
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />

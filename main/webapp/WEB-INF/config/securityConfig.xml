@@ -12,7 +12,7 @@
           http://www.springframework.org/schema/security/spring-security-4.2.xsd
 ">
     <security:authentication-manager>
-        <security:authentication-provider user-service-ref="userDetailService">
+        <security:authentication-provider >
         <security:password-encoder ref="encoder"/>
         </security:authentication-provider>
     </security:authentication-manager>
@@ -34,9 +34,7 @@
         <security:intercept-url pattern="/user/*" access="hasAnyRole('ROLE_ADMIN,ROLE_USER')" />
         <security:intercept-url pattern="/admin/*" access="hasAnyRole('ROLE_ADMIN')" />
     </security:http>
-    <bean id="userDetailService"
-          class="project.flightbooking.security.MyUserDetailsService">        
-    </bean>
+
     
     <bean id="encoder"
         class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
